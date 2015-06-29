@@ -1,4 +1,6 @@
 class Api::ProductsController < ApplicationController
+  protect_from_forgery except: [:create, :update, :destroy]
+
   def index
     render json: Product.all
   end
@@ -32,10 +34,10 @@ class Api::ProductsController < ApplicationController
   end
 
   def destroy
-    product = Product.new(params[:id])
+    product = Product.find(params[:id])
 
     if product.destroy
-      render json: destroy
+      render json: product
     else
       render json: product.errors, status: :unprocessable_entity
     end
