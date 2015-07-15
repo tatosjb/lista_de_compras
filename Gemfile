@@ -8,7 +8,7 @@ gem 'active_model_serializers', '0.9.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'shoulda-matchers', '2.8.0'
+  gem 'shoulda-matchers'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
