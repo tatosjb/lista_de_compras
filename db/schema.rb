@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20150629160152) do
 
   create_table "list_items", force: :cascade do |t|
-    t.integer  "list_id"
-    t.integer  "product_id"
+    t.integer  "list_id",    null: false
+    t.integer  "product_id", null: false
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
